@@ -1,15 +1,12 @@
 <html>
 <head>
-  <title>${title}
+  <title></title>
 </head>
 <body>
-  <h1>${title}</h1>
-
-  <p>${exampleObject.name} by ${exampleObject.developer}</p>
 
   <ul>
-    <#list systems as system>
-      <li>${system_index + 1}. ${system.name} from ${system.developer}</li>
+    <#list subforums as subforum>
+      <p>${subforum.title}</p>
     </#list>
   </ul>
 

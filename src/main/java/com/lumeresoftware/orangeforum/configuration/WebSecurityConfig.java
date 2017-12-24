@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             authorizeRequests()
                 .antMatchers("/", "/index").permitAll()
                 .anyRequest()
-                    .fullyAuthenticated()
+                    .permitAll() //TODO change back to fullyAuthenticated
             .and()
                 .formLogin()
                     .loginPage("/login")

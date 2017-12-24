@@ -5,26 +5,18 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
 @Table
 @Data
-public class User {
+public class Thread {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int id;
+    private int id;
 
-    public String username;
-
-    public String password;
-
-    public String aboutLine;
-
-    public String avatarId;
-
-    public String signature;
-
-    public int postCount;
+    @OneToOne
+    public Subforum subforum;
 
     @OneToMany
     public List<Post> posts;

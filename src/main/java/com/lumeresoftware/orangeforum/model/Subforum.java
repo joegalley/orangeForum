@@ -3,24 +3,19 @@ package com.lumeresoftware.orangeforum.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table
 @Data
-public class Post {
+public class Subforum {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    public String content;
+    public String title;
 
-    @OneToOne
-    public User author;
-
-    @ManyToOne
-    public Thread thread;
-
-    public LocalDateTime postedAt;
+    @OneToMany
+    public List<Thread> threads;
 }
