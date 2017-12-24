@@ -8,4 +8,7 @@ import javax.validation.constraints.NotNull;
 public class SubforumRequest {
     @NotNull
     public String title;
+
+    @NotNull
+    public String category;
 }

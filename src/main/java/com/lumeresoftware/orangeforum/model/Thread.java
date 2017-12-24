@@ -20,4 +20,11 @@ public class Thread {
 
     @OneToMany
     public List<Post> posts;
+
+    @OneToOne
+    public Category category;
+
+    public Integer viewCount;
+
+    public Integer replyCount;
 }

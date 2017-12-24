@@ -16,12 +16,13 @@
       </tr>
     </thead>
     <tbody>
-      <#list subforums as subforum>
+      <#list detailedSubforums as detailedSubforum>
         <tr>
-          <th>${subforum.title}</th>
-          <th>${subforum.category.name}</th>
-          <th>${subforum.threadCount}</th>
-          <th>${subforum.lastReply}</th>
+          <th>${detailedSubforum.title}</th>
+          <th>${detailedSubforum.category.name}</th>
+          <th>${detailedSubforum.threadCount}</th>
+          <th>${detailedSubforum.totalViewCount}</th>
+          <th>${detailedSubforum.totalReplyCount}</th>
         </tr>
       </#list>
     </tbody>

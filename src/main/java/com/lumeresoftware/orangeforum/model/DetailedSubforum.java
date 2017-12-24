@@ -1,24 +1,23 @@
 package com.lumeresoftware.orangeforum.model;
 
+import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.*;
 import java.util.List;
 
-@Entity
-@Table
 @Data
-public class Subforum {
+@Builder
+public class DetailedSubforum {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     public String title;
 
-    @OneToMany
     public List<Thread> threads;
 
-    @OneToOne
     public Category category;
+
+    public Integer totalViewCount;
+
+    public Integer totalReplyCount;
 }
