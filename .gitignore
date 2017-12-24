@@ -39,3 +39,4 @@ secrets.yml
 
 mvnw
 mvnw.cmd
+.mvn/*
