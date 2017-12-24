@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.*;
 public class SubforumController {
 
     @Autowired
-    SubforumService subforumService;
+    private SubforumService subforumService;
 
     @RequestMapping(value = {"", "/"}, method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public @ResponseBody Subforum createSubform(
-            @RequestBody
-                    SubforumRequest subforumRequest) {
+            @RequestBody SubforumRequest subforumRequest) {
 
         Subforum subforum = new Subforum();
         subforum.setTitle(subforumRequest.getTitle());

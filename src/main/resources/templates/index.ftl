@@ -1,14 +1,31 @@
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<#include "base.ftl">
 
-  <ul>
-    <#list subforums as subforum>
-      <p>${subforum.title}</p>
-    </#list>
-  </ul>
+<#macro page_head>
+  <@common_page_head/>
+  <title>Index</title>
+</#macro>
 
-</body>
-</html>
+<#macro page_body>
+  <table class="table">
+    <thead class="thead-default">
+      <tr>
+        <th>Subforum</th>
+        <th>Threads</th>
+        <th>Posts</th>
+        <th>Last Reply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <#list subforums as subforum>
+        <tr>
+          <th>${subforum.title}</th>
+          <th>${subforum.threadCount}</th>
+          <th>${subforum.postCount}</th>
+          <th>${subforum.lastReply}</th>
+        </tr>
+      </#list>
+    </tbody>
+  </table>
+</#macro>
+
+<@display_page/>
