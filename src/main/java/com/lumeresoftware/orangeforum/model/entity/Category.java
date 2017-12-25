@@ -1,4 +1,4 @@
-package com.lumeresoftware.orangeforum.model;
+package com.lumeresoftware.orangeforum.model.entity;
 
 import lombok.Data;
 

@@ -2,8 +2,8 @@ package com.lumeresoftware.orangeforum.controller;
 
 import com.lumeresoftware.orangeforum.controller.exception.UnknownCategoryException;
 import com.lumeresoftware.orangeforum.controller.request.SubforumRequest;
-import com.lumeresoftware.orangeforum.model.Category;
-import com.lumeresoftware.orangeforum.model.Subforum;
+import com.lumeresoftware.orangeforum.model.entity.Category;
+import com.lumeresoftware.orangeforum.model.entity.Subforum;
 import com.lumeresoftware.orangeforum.service.CategoryService;
 import com.lumeresoftware.orangeforum.service.SubforumService;
 import org.springframework.beans.factory.annotation.Autowired;

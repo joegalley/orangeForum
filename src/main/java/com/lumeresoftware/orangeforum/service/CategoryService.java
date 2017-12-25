@@ -1,7 +1,7 @@
 package com.lumeresoftware.orangeforum.service;
 
 import com.lumeresoftware.orangeforum.dao.CategoryRepository;
-import com.lumeresoftware.orangeforum.model.Category;
+import com.lumeresoftware.orangeforum.model.entity.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

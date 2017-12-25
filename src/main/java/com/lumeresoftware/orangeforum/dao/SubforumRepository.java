@@ -1,6 +1,6 @@
 package com.lumeresoftware.orangeforum.dao;
 
-import com.lumeresoftware.orangeforum.model.Subforum;
+import com.lumeresoftware.orangeforum.model.entity.Subforum;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

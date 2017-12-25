@@ -2,8 +2,8 @@ package com.lumeresoftware.orangeforum.service;
 
 import com.lumeresoftware.orangeforum.dao.SubforumRepository;
 import com.lumeresoftware.orangeforum.model.DetailedSubforum;
-import com.lumeresoftware.orangeforum.model.Subforum;
-import com.lumeresoftware.orangeforum.model.Thread;
+import com.lumeresoftware.orangeforum.model.entity.Subforum;
+import com.lumeresoftware.orangeforum.model.entity.Thread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
