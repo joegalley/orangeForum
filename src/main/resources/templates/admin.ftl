@@ -6,27 +6,21 @@
 </#macro>
 
 <#macro page_body>
-  <table class="table">
-    <thead class="thead-default">
-      <tr>
-        <th>Subforum</th>
-        <th>Threads</th>
-        <th>Posts</th>
-        <th>Last Reply</th>
-      </tr>
-    </thead>
-    <tbody>
-      <#list detailedSubforums as detailedSubforum>
-        <tr>
-          <th>${detailedSubforum.title}</th>
-          <th>${detailedSubforum.category.name}</th>
-          <th>${detailedSubforum.threadCount}</th>
-          <th>${detailedSubforum.totalViewCount}</th>
-          <th>${detailedSubforum.totalReplyCount}</th>
-        </tr>
-      </#list>
-    </tbody>
-  </table>
+${tab}
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link <#if tab == "stats">active</#if>" href="/admin?tab=stats">Forum Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <#if tab == "subCat">active</#if>" href="/admin?tab=subCat">Subforums & Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <#if tab == "users">active</#if>" href="/admin?tab=users">User Management</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link <#if tab == "stats">custom</#if>" href="/admin?tab=customization">Customization</a>
+    </li>
+  </ul>
 </#macro>
 
 <@display_page/>
