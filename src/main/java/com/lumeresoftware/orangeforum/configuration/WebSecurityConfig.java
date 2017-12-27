@@ -22,13 +22,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll() //TODO change back to fullyAuthenticated
             .and()
                 .formLogin()
-                    .loginPage("/login")
-                        .failureUrl("/login?error")
+                    .loginPage("/index")
+                        .failureUrl("/index?error")
                 .permitAll()
             .and()
                 .logout()
                     .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                    .logoutSuccessUrl("/login")
+                    .logoutSuccessUrl("/index")
             .and()
                 .csrf().disable();
         // @formatter:on

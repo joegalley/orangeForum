@@ -19,6 +19,8 @@ public class Subforum {
     @OneToMany
     public List<Thread> threads;
 
+    public Integer threadCount;
+
     @OneToOne
     public Category category;
 }

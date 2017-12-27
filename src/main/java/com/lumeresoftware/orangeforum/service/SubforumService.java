@@ -28,16 +28,20 @@ public class SubforumService {
     public List<DetailedSubforum> getSubforumsWithDetails() {
         Stream<Subforum> subforums = this.getSubforums().stream();
 
-        return subforums.map(subforum -> {
-            return DetailedSubforum.builder()
-                    .id(subforum.getId())
-                    .title(subforum.getTitle())
-                    .threads(subforum.getThreads())
-                    .category(subforum.getCategory())
-                    .totalViewCount(this.getTotalViewCount(subforum))
-                    .totalReplyCount(this.getTotalReplyCount(subforum))
-                    .build();
-        }).collect(Collectors.toList());
+        return subforums.map(subforum -> DetailedSubforum.builder()
+                .id(subforum.getId())
+                .category(subforum.getCategory())
+                .title(subforum.getTitle())
+                .threads(subforum.getThreads())
+                .threadCount(this.getThreadCount(subforum))
+                .totalViewCount(this.getTotalViewCount(subforum))
+                .totalReplyCount(this.getTotalReplyCount(subforum))
+                .build())
+                .collect(Collectors.toList());
+    }
+
+    public Integer getThreadCount(Subforum subforum) {
+        return subforumRepository.findOne(subforum.getId()).getThreads().size();
     }
 
     public Integer getTotalViewCount(Subforum subforum) {
